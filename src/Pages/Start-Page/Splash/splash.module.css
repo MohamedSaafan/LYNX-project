@@ -1,0 +1,37 @@
+    
+.splash{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient( 160deg, #F710E7, #F84771, #FAAC0F, #26C2FA);    
+}
+.container{    
+    position: relative;
+    display: flex;
+    background-color: inherit !important;
+    text-align: center;
+    display: flex;
+    padding: 260px 24px 0px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+    height: 100%;
+}
+
+.logo{
+    width: 286px;
+    height: 95px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.companyName{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 40px;
+}
