@@ -1,0 +1,46 @@
+.gredient{
+    background:linear-gradient( to top left, #40C9FFD9, #9373FF, #E81CFF);
+    height: 100vh;
+    width: 100vw;
+}
+.register{
+    padding: 50px 24px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 286px;
+    height: 95px;
+}
+
+.button{
+    text-transform: capitalize;
+    padding: 10px 24px 10px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    display: block;
+}
+
+.carousel{
+    height: 70%;
+}
+.carouselItem{
+    padding: 0;
+    width: 360px;
+    height: 460px;
+    max-width: 360px;
+    background-image: url(../../../assets/images/carousele-img1.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 0px rgba(163, 65, 144, 0.30), 0px 4px 8px 3px rgba(98, 72, 93, 0.30);
+}

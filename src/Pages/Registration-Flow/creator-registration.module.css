@@ -1,0 +1,24 @@
+.basicLogo{
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;    
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+.text{
+}
+.logo{
+    width: 233.839px;
+    height: 79.056px;
+    flex-shrink: 0;
+}

@@ -1,0 +1,10 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 48px 0;
+}
+
+.textField{
+    
+}
