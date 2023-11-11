@@ -1,5 +1,8 @@
 .form{
-
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    gap: 5px;
 }
 
 .textField{

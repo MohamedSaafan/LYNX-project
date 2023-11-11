@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './step1.module.css';
-import { Button, TextField } from '@mui/material';
+import { Box, Button, TextField, Typography } from '@mui/material';
 import theme from '../../../themes/theme';
 
 const Step1 = ({ onButtonClick }) => {
@@ -24,18 +24,32 @@ const Step1 = ({ onButtonClick }) => {
     
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
-            <TextField
-                label="Enter Priority Code"
-                name="priorityCode"
-                value={formData.priorityCode}
-                onChange={handleChange}
-                variant="outlined"
-                className={styles.textField}
-                helperText="No priority code? No worries! Skip to the next step"
-                fullWidth
-            />
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap:'2px',
+                }}
+            >
+                <TextField
+                    label="Enter Priority Code"
+                    name="priorityCode"
+                    value={formData.priorityCode}
+                    onChange={handleChange}
+                    variant="outlined"
+                    className={styles.textField}
+                    
+                    fullWidth
+                    sx={{backgroundColor:theme.palette.lightgrey.lightgrey00}}
+                />
+                <Typography variant='caption'>No priority code? No worries! Skip to the next step</Typography>
+
+            </Box>
             <Button type="submit" variant="contained"
-                sx={{width:100}}
+                sx={{
+                    width: '183px',
+                    p:'10px 24px'
+                }}
             >
                 Next
             </Button>

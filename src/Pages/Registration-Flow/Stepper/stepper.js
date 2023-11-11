@@ -4,17 +4,110 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Step1 from '../Step1/step1';
 import Step2 from '../Step2/step2';
 import Step4 from '../Step4/step4';
 import Step3 from '../Step3/step3';
+import theme from '../../../themes/theme';
+import { ChevronLeft } from '@mui/icons-material';
 
-const steps = ['first', 'second', 'third', 'fourth'];
+
+import { styled } from '@mui/material/styles';
+import PropTypes from 'prop-types';
+import SettingsIcon from '@mui/icons-material/Settings';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import VideoLabelIcon from '@mui/icons-material/VideoLabel';
+import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
+
+
+
+const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
+  [`&.${stepConnectorClasses.alternativeLabel}`]: {
+    top: 22,
+  },
+  [`&.${stepConnectorClasses.active}`]: {
+    [`& .${stepConnectorClasses.line}`]: {
+      backgroundImage:
+        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)',
+      
+    },
+  },
+  [`&.${stepConnectorClasses.completed}`]: {
+    [`& .${stepConnectorClasses.line}`]: {
+      backgroundImage:
+        'linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)',
+    },
+  },
+  [`& .${stepConnectorClasses.line}`]: {
+    height: 3,
+    border: 0,
+    backgroundColor:
+      theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#eaeaf0',
+    borderRadius: 1,
+  },
+}));
+
+const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
+  zIndex: 1,
+  color: theme.palette.darkgrey.darkgrey400,
+  width: 50,
+  height: 50,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  ...(ownerState.active && {
+    color: theme.palette.primary.main,
+      
+  }),
+  ...(ownerState.completed && {
+    color: theme.palette.primary.main,
+
+  }),
+}));
+
+function ColorlibStepIcon(props) {
+  const { active, completed, className } = props;
+
+  const icons = {
+    1: <SettingsIcon />,
+    2: <GroupAddIcon />,
+    3: <VideoLabelIcon />,
+    4: <VideoLabelIcon />,
+  };
+
+  return (
+    <ColorlibStepIconRoot ownerState={{ completed, active }} className={className}>
+      {icons[String(props.icon)]}
+    </ColorlibStepIconRoot>
+  );
+}
+
+ColorlibStepIcon.propTypes = {
+  /**
+   * Whether this step is active.
+   * @default false
+   */
+  active: PropTypes.bool,
+  className: PropTypes.string,
+  /**
+   * Mark the step as completed. Is passed to child components.
+   * @default false
+   */
+  completed: PropTypes.bool,
+  /**
+   * The label displayed in the step icon.
+   */
+  icon: PropTypes.node,
+};
+
+
+const steps = ['Priorty Code', 'Creator Type', 'Basics', 'Collabs'];
+
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
+
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -54,40 +147,27 @@ export default function HorizontalLinearStepper() {
     });
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={activeStep}>
+      <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
         {steps.map((label, index) => {
           const stepProps = {};
-          const labelProps = {};
-          if (isStepOptional(index)) {
-            labelProps.optional = (
-              <Typography variant="caption">Optional</Typography>
-            );
-          }
+          const labelProps = {
+          };
           if (isStepSkipped(index)) {
             stepProps.completed = false;
           }
           return (
             <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
+              <StepLabel StepIconComponent={ColorlibStepIcon} {...labelProps}>{label}</StepLabel>
             </Step>
           );
         })}
       </Stepper>
       {activeStep === steps.length ? (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>
-            All steps completed - you&apos;re finished
-          </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Box sx={{ flex: '1 1 auto' }} />
-            <Button onClick={handleReset}>Reset</Button>
-          </Box>
+          
         </React.Fragment>
       ) : (
         <React.Fragment>
@@ -98,11 +178,17 @@ export default function HorizontalLinearStepper() {
             {activeStep === 3 && <Step4 onButtonClick={handleNext} />}
             
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Button
-                color="inherit"
+              <Button
+                startIcon={<ChevronLeft />}
                 disabled={activeStep === 0}
                 onClick={handleBack}
-                sx={{ mr: 1, position: 'absolute', top: 0, }}
+                
+                sx={{
+                  mr: 1, position: 'absolute',
+                  top: 10, display: activeStep === 0 ? 'none' : 'flex',
+                  textTransform: 'capitalize',
+                  color: theme.palette.darkgrey.darkgrey500
+                }}
             >
               Back
             </Button>

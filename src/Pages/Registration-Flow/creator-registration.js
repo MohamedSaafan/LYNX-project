@@ -10,13 +10,13 @@ import HorizontalLinearStepper from './Stepper/stepper';
 const CreatorRegistration = () => {
   const [step, setStep] = useState(1);
 
-  const handleNext = () => {
-    setStep((prevStep) => prevStep + 1);
-  };
 
   return (
     <Box
-        sx={{backgroundColor: theme.palette.lightgrey.lightgrey500}}
+      sx={{
+        backgroundColor: theme.palette.lightgrey.lightgrey500,
+        minHeight: '100vh',
+      }}
       >
           <Container className={styles.basicLogo}>
               <Container className={styles.content}>
