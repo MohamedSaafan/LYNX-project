@@ -40,7 +40,12 @@ const Step1 = ({ onButtonClick }) => {
                     className={styles.textField}
                     
                     fullWidth
-                    sx={{backgroundColor:theme.palette.lightgrey.lightgrey00}}
+                    sx={{
+                        backgroundColor: theme.palette.lightgrey.lightgrey00,
+                        width: {
+                            md:'50%',
+                        }    
+                    }}
                 />
                 <Typography variant='caption'>No priority code? No worries! Skip to the next step</Typography>
 
@@ -48,7 +53,11 @@ const Step1 = ({ onButtonClick }) => {
             <Button type="submit" variant="contained"
                 sx={{
                     width: '183px',
-                    p:'10px 24px'
+                    p: '10px 24px',
+                    width: {
+                        xs: '183px',
+                        sm:'25%',
+                    }
                 }}
             >
                 Next

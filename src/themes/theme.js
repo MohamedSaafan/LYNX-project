@@ -42,3 +42,25 @@ const theme = createTheme({
 });
   
 export default theme;
+
+
+
+/*
+
+<Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
+        {steps.map((label, index) => {
+          const stepProps = {};
+          const labelProps = {
+          };
+          if (isStepSkipped(index)) {
+            stepProps.completed = false;
+          }
+          return (
+            <Step key={label} {...stepProps}>
+              <StepLabel StepIconComponent={ColorlibStepIcon} {...labelProps}>{label}</StepLabel>
+            </Step>
+          );
+        })}
+      </Stepper>
+
+*/

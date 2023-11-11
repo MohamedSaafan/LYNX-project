@@ -9,21 +9,20 @@ import Step2 from '../Step2/step2';
 import Step4 from '../Step4/step4';
 import Step3 from '../Step3/step3';
 import theme from '../../../themes/theme';
-import { ChevronLeft } from '@mui/icons-material';
+import { AutoAwesome, ChevronLeft, MusicNote, SportsEsports } from '@mui/icons-material';
 
 
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import SettingsIcon from '@mui/icons-material/Settings';
-import GroupAddIcon from '@mui/icons-material/GroupAdd';
-import VideoLabelIcon from '@mui/icons-material/VideoLabel';
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
+import { StepIcon } from '@mui/material';
 
 
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
-    top: 22,
+    display: 'none',
   },
   [`&.${stepConnectorClasses.active}`]: {
     [`& .${stepConnectorClasses.line}`]: {
@@ -39,13 +38,14 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
     },
   },
   [`& .${stepConnectorClasses.line}`]: {
-    height: 3,
+    height: 10,
     border: 0,
     backgroundColor:
       theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#eaeaf0',
     borderRadius: 1,
   },
 }));
+
 
 const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
   zIndex: 1,
@@ -70,9 +70,9 @@ function ColorlibStepIcon(props) {
 
   const icons = {
     1: <SettingsIcon />,
-    2: <GroupAddIcon />,
-    3: <VideoLabelIcon />,
-    4: <VideoLabelIcon />,
+    2: <MusicNote />,
+    3: <SportsEsports />,
+    4: <AutoAwesome />,
   };
 
   return (
@@ -81,6 +81,7 @@ function ColorlibStepIcon(props) {
     </ColorlibStepIconRoot>
   );
 }
+
 
 ColorlibStepIcon.propTypes = {
   /**
@@ -101,12 +102,18 @@ ColorlibStepIcon.propTypes = {
 };
 
 
-const steps = ['Priorty Code', 'Creator Type', 'Basics', 'Collabs'];
+const steps = [
+  {label:'Priorty Code'},
+  {label:'Creator Type'},
+  {label:'Basics'},
+  {label:'Collabs'},
+];
 
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
+  const completedSteps = []; // Define an array of completed step indices
 
 
   const isStepOptional = (step) => {
@@ -150,7 +157,7 @@ export default function HorizontalLinearStepper() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
+      <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />} >
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps = {
@@ -160,7 +167,53 @@ export default function HorizontalLinearStepper() {
           }
           return (
             <Step key={label} {...stepProps}>
-              <StepLabel StepIconComponent={ColorlibStepIcon} {...labelProps}>{label}</StepLabel>
+              <StepLabel StepIconComponent={ColorlibStepIcon} {...labelProps}
+                sx={{
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  paddingBottom: 1,  
+                  '.MuiStepLabel-iconContainer': {
+                    p: '0',
+                    m:'0',
+                  },
+                  '& .MuiStepLabel-labelContainer': {
+                    
+                  },
+                  '& .MuiStepLabel-label': {
+                    '&:after': {
+                      content: '""',
+                      display: 'block',
+                      height: '8px',
+                      bgcolor: theme.palette.primary.light,
+                      width: '90%',
+                      position: 'absolute',
+                      bottom: '-12px',
+                      left: '0',
+                      borderRadius: '16px',
+                      m:'0 5px'
+                    },
+                    '&.Mui-active': { // Change styles when the step is active
+                      color: theme.palette.primary.main, // Change the active color here
+                      '&:after': {
+                        bgcolor: theme.palette.primary.main,
+                      }
+                    },
+                    '&.Mui-completed': { // Change styles when the step is completed
+                      color: theme.palette.primary.main, // Change the completed color here
+                      '&:after': {
+                        bgcolor: theme.palette.primary.main,
+                      }
+                    },
+                    
+                    '&.MuiStepLabel-alternativeLabel': {
+                      marginTop: '-3px',
+                    },
+                  },
+                  
+                }}
+              >
+                {label.label}
+              </StepLabel>
             </Step>
           );
         })}

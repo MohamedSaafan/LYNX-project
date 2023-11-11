@@ -66,7 +66,12 @@ const Step3 = ({ onButtonClick }) => {
                     value={selectedCountry}
                     onChange={handleCountryChange}
                     fullWidth
-                    sx={{ backgroundColor: '#fff' }}
+                    sx={{
+                        backgroundColor: '#fff',
+                        width: {
+                            md:'50%',
+                        }
+                    }}
                     >
                     {countries.map((country, index) => (
                         <MenuItem key={index} value={country}>
@@ -81,7 +86,12 @@ const Step3 = ({ onButtonClick }) => {
                 fullWidth
                 value={postalCode}
                 onChange={handlePostalCodeChange}
-                    sx={{ backgroundColor: '#fff', width:'50%' }}
+                    sx={{
+                        backgroundColor: '#fff', width: '50%',
+                        width: {
+                            md:'50%',
+                        }
+                    }}
                 
                 />
 
@@ -91,7 +101,12 @@ const Step3 = ({ onButtonClick }) => {
                     fullWidth
                     value={birthYear}
                     onChange={handleBirthYearChange}
-                    sx={{ backgroundColor: '#fff' }}
+                    sx={{
+                        backgroundColor: '#fff',
+                        width: {
+                            md:'50%',
+                        }
+                    }}
 
                     InputProps={{
                         endAdornment: (
@@ -127,7 +142,13 @@ const Step3 = ({ onButtonClick }) => {
             </Box>
 
             <Button type="submit" variant="contained"
-                sx={{pt:'10px', pb:'10px'}}
+                sx={{
+                    pt: '10px', pb: '10px',
+                    width: {
+                        xs: '100%',
+                        md:'25%',
+                    }
+                }}
             >
                 Next
             </Button>

@@ -2,7 +2,8 @@
 .splash{
     height: 100vh;
     width: 100vw;
-    background: linear-gradient( 160deg, #F710E7, #F84771, #FAAC0F, #26C2FA);    
+    background: linear-gradient( 160deg, #F710E7 9.58%, #FAAC0F 59.4%, #26C2FA 93.44%);    
+
 }
 .container{    
     position: relative;

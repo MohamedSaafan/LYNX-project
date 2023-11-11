@@ -73,7 +73,13 @@ const Step2 = ({ onButtonClick }) => {
         })}
             </List>
             <Button type="submit" variant="contained"
-                sx={{pt:'10px', pb:'10px'}}
+                sx={{
+                    pt: '10px', pb: '10px',
+                    width: {
+                        xs: '100%',
+                        md:'50%',
+                    }
+                }}
             >
                 Next
             </Button>
