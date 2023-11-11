@@ -1,6 +1,6 @@
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import './App.css';
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Splash from './Pages/Start-Page/Splash/splash';
 import Login from './Pages/Start-Page/Register-Login/register-login';
 import theme from './themes/theme';
@@ -20,7 +20,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path='/' element={<Splash />} />
+        <Route path='login' element = {<Login /> } />
+        
+        <Route path="creator-register" element={<CreatorRegistration />}></Route>
+        <Route path='thanks' element = {<Thanks /> } ></Route>
+      </Routes>
     </ThemeProvider>
   );
 }
