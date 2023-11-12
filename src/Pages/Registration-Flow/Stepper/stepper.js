@@ -180,6 +180,9 @@ export default function HorizontalLinearStepper() {
                     
                   },
                   '& .MuiStepLabel-label': {
+                    fontSize: {
+                      xs: '12px',
+                    },
                     '&:after': {
                       content: '""',
                       display: 'block',
