@@ -6,6 +6,8 @@ import Login from './Pages/Start-Page/Register-Login/register-login';
 import theme from './themes/theme';
 import CreatorRegistration from './Pages/Registration-Flow/creator-registration';
 import Thanks from './Pages/Registration-Flow/RegisterationThanks/thanks';
+import Footer from './Pages/Footer/footer';
+import MyProfile from './Pages/My-Profile-View/My-Profile/MyProfile';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,9 +25,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Splash />} />
         <Route path='login' element = {<Login /> } />
-        
         <Route path="creator-register" element={<CreatorRegistration />}></Route>
-        <Route path='thanks' element = {<Thanks /> } ></Route>
+        <Route path='thanks' element={<Thanks />} ></Route>
+        <Route path='my-profile' element={<MyProfile />}>
+          
+        </Route>
       </Routes>
     </ThemeProvider>
   );

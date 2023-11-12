@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material"
 
 const theme = createTheme({
-    palette: {
+  palette: {
         primary: {
             dark: "#B32DE6",
             main: "#8C20B3", //500
@@ -17,7 +17,8 @@ const theme = createTheme({
         },
         warning: {
             main: "#F98B09", //500
-  
+          light: "#FAE9D0", //100
+            dark: "#BB742A", //600
         },
         tertiary: {
             golden500: "#FAAC0F",
@@ -44,23 +45,3 @@ const theme = createTheme({
 export default theme;
 
 
-
-/*
-
-<Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
-        {steps.map((label, index) => {
-          const stepProps = {};
-          const labelProps = {
-          };
-          if (isStepSkipped(index)) {
-            stepProps.completed = false;
-          }
-          return (
-            <Step key={label} {...stepProps}>
-              <StepLabel StepIconComponent={ColorlibStepIcon} {...labelProps}>{label}</StepLabel>
-            </Step>
-          );
-        })}
-      </Stepper>
-
-*/
