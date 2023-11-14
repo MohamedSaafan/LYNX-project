@@ -8,14 +8,8 @@ import CreatorRegistration from './Pages/Registration-Flow/creator-registration'
 import Thanks from './Pages/Registration-Flow/RegisterationThanks/thanks';
 import Footer from './Pages/Footer/footer';
 import MyProfile from './Pages/My-Profile-View/My-Profile/MyProfile';
+import AboutEdit from './Pages/My-Profile-View/About-Edit/aboutEdit';
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<CreatorRegistration />}>
-      <Route path='thanks' element = {Thanks } />
-    </Route>
-  )
-)
 
 
 function App() {
@@ -30,6 +24,7 @@ function App() {
         <Route path='my-profile' element={<MyProfile />}>
           
         </Route>
+        <Route path='about-edit' element={<AboutEdit />} />
       </Routes>
     </ThemeProvider>
   );
