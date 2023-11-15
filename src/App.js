@@ -9,6 +9,8 @@ import Thanks from './Pages/Registration-Flow/RegisterationThanks/thanks';
 import Footer from './Pages/Footer/footer';
 import MyProfile from './Pages/My-Profile-View/My-Profile/MyProfile';
 import AboutEdit from './Pages/My-Profile-View/About-Edit/aboutEdit';
+import EditSkill from './Pages/My-Profile-View/My-Skills/components/status/editSkill';
+import EditDescription from './Pages/My-Profile-View/My-Skills/components/skill-about/editDescription';
 
 
 
@@ -25,6 +27,8 @@ function App() {
           
         </Route>
         <Route path='about-edit' element={<AboutEdit />} />
+        <Route path='editSkill' element={<EditSkill/>} />
+        <Route path='editDescription' element={<EditDescription/>} />
       </Routes>
     </ThemeProvider>
   );

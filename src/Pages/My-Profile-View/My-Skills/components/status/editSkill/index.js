@@ -1,0 +1,90 @@
+import { Box, Button, FormControl, FormHelperText, InputLabel, MenuItem, Select, Typography } from "@mui/material";
+import React from "react";
+import styles from './style.module.css';
+import theme from "../../../../../../themes/theme";
+
+const EditSkill = () => {
+    return (
+        <Box className={styles.editSkill}>
+            <Box className={styles.communityStatus}
+                sx={{
+                    width: {
+                        md:'50%',
+                    },
+                    alignSelf: {
+                        xs: 'stretch',
+                        md: 'auto'
+                    }
+                }}
+            >
+                <Box className={styles.title}>
+                    <Typography variant="body1" color={theme.palette.darkgrey.darkgrey600}>
+                    Edit Skills Informations
+                    </Typography>
+                    <Button variant="text"
+                        sx={{
+                            p: '1px 0px', 
+                            textTransform: 'capitalize',
+                            justifyContent: 'flex-end',
+                        }}
+                    >Save</Button>
+                </Box>
+                <Box className={styles.inputField}>
+                    <FormControl
+                        sx={{
+                            width: {
+                                xs: '100%',
+                            }
+                        }}
+                    >
+                        <InputLabel >Category</InputLabel>
+                        <Select
+                            label="Category"
+                        >
+                            <MenuItem value={10}>Ten</MenuItem>
+                            <MenuItem value={20}>Twenty</MenuItem>
+                            <MenuItem value={30}>Thirty</MenuItem>
+                        </Select>
+                        <FormHelperText>Single select only</FormHelperText>
+                    </FormControl>
+                    <FormControl
+                        sx={{
+                            width: {
+                                xs: '100%',
+                            }
+                        }}
+                    >
+                        <InputLabel >Select Skill</InputLabel>
+                        <Select
+                            label="Select Skill"
+                        >
+                            <MenuItem value={10}>Ten</MenuItem>
+                            <MenuItem value={20}>Twenty</MenuItem>
+                            <MenuItem value={30}>Thirty</MenuItem>
+                        </Select>
+                        <FormHelperText>Single select only</FormHelperText>
+                    </FormControl>
+                    <FormControl
+                        sx={{
+                            width: {
+                                xs: '100%',
+                            }
+                        }}
+                    >
+                        <InputLabel >Select Speciality</InputLabel>
+                        <Select
+                            label="Select Speciality"
+                        >
+                            <MenuItem value={10}>Ten</MenuItem>
+                            <MenuItem value={20}>Twenty</MenuItem>
+                            <MenuItem value={30}>Thirty</MenuItem>
+                        </Select>
+                        <FormHelperText>Single select only</FormHelperText>
+                    </FormControl>
+                </Box>
+            </Box>
+        </Box>
+    );
+}
+
+export default EditSkill;

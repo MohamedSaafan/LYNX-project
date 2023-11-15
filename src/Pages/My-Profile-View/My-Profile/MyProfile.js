@@ -7,6 +7,8 @@ import { AddPhotoAlternateOutlined } from "@mui/icons-material";
 import theme from "../../../themes/theme";
 import Footer from "../../Footer/footer";
 import AboutMe from "../About-Me/aboutMe";
+import MySkills from "../My-Skills";
+import ShoutOuts from "../Shout-Outs";
 
 
 function CustomTabPanel(props) {
@@ -148,10 +150,10 @@ const MyProfile = () => {
                         <AboutMe />
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={1}>
-                        Item Two
+                        <MySkills />
                     </CustomTabPanel>
                     <CustomTabPanel value={value} index={2}>
-                        Item Three
+                        <ShoutOuts />
                     </CustomTabPanel>
                 </Box>
             </Box>

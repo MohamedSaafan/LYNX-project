@@ -38,6 +38,9 @@ const theme = createTheme({
             lightgrey500: "#F5F2F6",
             lightgrey700: "#DED6E1",
             lightgrey00: "#FFFFFF",
+        },
+        danger: {
+            red300: '#E2848A',
         }
     },
 });
