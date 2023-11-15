@@ -1,7 +1,7 @@
 import React from "react";
 
 import PropTypes from 'prop-types';
-import { Box, Button, Container, Tab, Tabs, Typography} from "@mui/material";
+import { Box, Button, Container, Link, Tab, Tabs, Typography} from "@mui/material";
 import styles from './MyProfile.module.css';
 import { AddPhotoAlternateOutlined } from "@mui/icons-material";
 import theme from "../../../themes/theme";
@@ -109,7 +109,10 @@ const MyProfile = () => {
                                         backgroundColor: theme.palette.lightgrey.lightgrey00,
                                         
                                     }}
-                                >Make LYNX Better</Button>
+                                >
+                                    <Link href="/makeLynexBetter" underline="none" color="inherit" > Make LYNX Better </Link> 
+                                
+                                </Button>
                             </Box>
                         </Box>
                     </Box>

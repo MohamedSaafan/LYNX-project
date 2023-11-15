@@ -1,4 +1,4 @@
-import { Box, Button, ClickAwayListener, Fade, IconButton, Tooltip, Typography, capitalize, tooltipClasses } from "@mui/material";
+import { Box, Button, ClickAwayListener, Fade, IconButton, Link, Tooltip, Typography, capitalize, tooltipClasses } from "@mui/material";
 import React from "react";
 import theme from "../../../themes/theme";
 import styles from './aboutMe.module.css';
@@ -283,7 +283,7 @@ const AboutMe = () => {
                     textTransform:'capitalize',
                 }}
             >
-                Edit
+                <Link href="/about-edit" underline="none" color="inherit"> Edit </Link>
             </Button>
         </Box>  
     );
