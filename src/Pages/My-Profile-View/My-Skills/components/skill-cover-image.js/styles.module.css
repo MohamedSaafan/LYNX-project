@@ -25,3 +25,20 @@
     right: 8px;
     top: 8px;
 }
+.primarySkills{
+    border-radius: 6px;
+    border: 1px dashed ;
+    width: 100%;
+    flex: 1 0 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

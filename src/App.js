@@ -11,8 +11,11 @@ import MyProfile from './Pages/My-Profile-View/My-Profile/MyProfile';
 import AboutEdit from './Pages/My-Profile-View/About-Edit/aboutEdit';
 import EditSkill from './Pages/My-Profile-View/My-Skills/components/status/editSkill';
 import EditDescription from './Pages/My-Profile-View/My-Skills/components/skill-about/editDescription';
-import MakeLynxBetter from './Pages/My-Profile-View/MakeLYNXBetter';
-
+import MakeLynxBetter from './Pages/My-Profile-View/Feedback/makeLynxBetter';
+import MLBThanks from './Pages/My-Profile-View/Feedback/makeLynxBetter/MLBThanks/index';
+import HelpWithClassification from './Pages/My-Profile-View/Feedback/helpWithClassificaton';
+import HWCThanks from './Pages/My-Profile-View/Feedback/helpWithClassificaton/HWCThanks';
+import UploadCoverImage from './Pages/My-Profile-View/My-Skills/components/skill-cover-image.js/upload-cover-image';
 
 
 function App() {
@@ -30,7 +33,11 @@ function App() {
         <Route path='about-edit' element={<AboutEdit />} />
         <Route path='editSkill' element={<EditSkill/>} />
         <Route path='editDescription' element={<EditDescription/>} />
-        <Route path='makeLynxBetter' element={<MakeLynxBetter/>} />
+        <Route path='makeLynxBetter' element={<MakeLynxBetter />} />
+        <Route path='MLBThanks' element={<MLBThanks />} />
+        <Route path='HWCThanks' element={<HWCThanks />} />
+        <Route path='helpWithClassificatin' element={<HelpWithClassification/>} />
+        <Route path='UCImage' element={<UploadCoverImage />} />
       </Routes>
     </ThemeProvider>
   );

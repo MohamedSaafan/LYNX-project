@@ -110,7 +110,7 @@ const MyProfile = () => {
                                         
                                     }}
                                 >
-                                    <Link href="/makeLynexBetter" underline="none" color="inherit" > Make LYNX Better </Link> 
+                                    <Link href="/makeLynxBetter" underline="none" color="inherit" > Make LYNX Better </Link> 
                                 
                                 </Button>
                             </Box>

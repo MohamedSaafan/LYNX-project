@@ -2,9 +2,10 @@ import { Box, Typography, Link, Button } from "@mui/material";
 import React from "react";
 import theme from "../../../themes/theme";
 import styles from './style.module.css';
-import PrimarySkill from "./components/primary-skill.js";
 import SkillStatus from "./components/status";
 import AboutSkill from "./components/skill-about";
+import Skills from "./components/skills";
+import SkillCoverImage from "./components/skill-cover-image.js";
 
 const MySkills = () => {
     return (
@@ -20,14 +21,15 @@ const MySkills = () => {
                 
             }}
         >
+            <Skills />
             <Box className={styles.help}>
-                <Link underline="none">
+                <Link href='/helpWithClassificatin' underline="none">
                     <Typography variant="body2" sx={{ color: theme.palette.secondary.dark, textDecoration:'underline' }}>
                         Need help with your classifications?
                 </Typography>
             </Link>
             </Box>
-            <PrimarySkill />            
+            <SkillCoverImage />            
             <SkillStatus />
             <AboutSkill />
             <Button variant="contained"

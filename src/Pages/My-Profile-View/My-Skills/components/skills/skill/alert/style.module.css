@@ -1,0 +1,12 @@
+.alert{
+    display: flex;
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 8px;
+    top: -8px;
+    border-radius: 100px;
+}

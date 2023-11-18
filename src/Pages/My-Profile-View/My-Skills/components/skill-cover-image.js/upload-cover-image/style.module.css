@@ -1,0 +1,64 @@
+.coverImage{
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+.primaryImage{
+    display: flex;
+    height: 240px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    position: relative;
+}
+.primarySkills{
+    border-radius: 6px;
+    border: 1px dashed ;
+    width: 100%;
+    flex: 1 0 0;
+}
+.option{
+    display: flex;
+    width: 124px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+ }
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.upload{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+.uploadContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}

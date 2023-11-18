@@ -6,6 +6,7 @@ const theme = createTheme({
             dark: "#B32DE6",
             main: "#8C20B3", //500
             light: "#D591F0",
+            purpel50: "#F4E4FB",
         },
         secondary: {
             main: "#507EF1", //400
@@ -14,6 +15,7 @@ const theme = createTheme({
         },
         success: {
             main: "#63D799", //400
+            dark: "#049262", //500
         },
         warning: {
             main: "#F98B09", //500
@@ -32,6 +34,7 @@ const theme = createTheme({
             darkgrey200: "#BEBCBE",
             darkgrey100: "#DEDDDE",
             darkgrey600: "#484649",
+            darkgrey50: "#F0EFF0",
         },
         lightgrey: {
             lightgrey600: "#E8E1EA",
@@ -41,6 +44,7 @@ const theme = createTheme({
         },
         danger: {
             red300: '#E2848A',
+            red500: '#E82C3C',
         }
     },
 });
