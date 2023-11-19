@@ -63,11 +63,6 @@ const SkillStatus = () => {
                     >No specialty selected ye!</Typography>
                 </Box>
             </Box>
-            <Box className={styles.edit}>
-                <Link href="/editSkill" underline="none"  sx={{color:theme.palette.primary}}>
-                    Edit
-                </Link>
-            </Box>
         </Box>
     );
 }

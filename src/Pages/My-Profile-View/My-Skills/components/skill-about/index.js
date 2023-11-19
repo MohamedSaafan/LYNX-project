@@ -77,11 +77,6 @@ const AboutSkill =()=>{
                     }}
                 >0 Year of Experience</Button>
             </Box>
-            <Box className={styles.edit}>
-                <Link href="/editDescription" underline="none"  sx={{color:theme.palette.primary}}>
-                    Edit
-                </Link>
-            </Box>
         </Box>        
     );
 }

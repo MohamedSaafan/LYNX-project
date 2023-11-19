@@ -32,15 +32,30 @@ const MySkills = () => {
             <SkillCoverImage />            
             <SkillStatus />
             <AboutSkill />
-            <Button variant="contained"
+            <Button variant="outlined"
                 sx={{
                     pt: '10px', pb: '10px',
+                    color: theme.palette.darkgrey.darkgrey500,
+                    bgcolor: theme.palette.lightgrey.lightgrey500,
+                    borderColor: theme.palette.lightgrey.lightgrey500,
+                    textTransform: 'capitalize',
                     width: {
                         xs: '100%',
-                        
+
                     }
                 }}
-            >Add Skills</Button>
+            >Edit</Button>
+            <Button variant="text"
+                sx={{
+                    pt: '10px', pb: '10px',
+                    color: theme.palette.darkgrey.darkgrey400,
+                    textTransform: 'capitalize',
+                    width: {
+                        xs: '100%',
+
+                    }
+                }}
+            >Delete</Button>
         </Box>    
     );
 }

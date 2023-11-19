@@ -1,15 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import React, { useState } from "react";
 import styles from './style.module.css';
 import theme from "../../../../../../themes/theme";
-import { Check, Info, PieChart, PieChartOutline, PieChartOutlined } from "@mui/icons-material";
+import { Add, Check, Info, PieChart, PieChartOutline, PieChartOutlined, PlusOne } from "@mui/icons-material";
 import Alert from "./alert";
 
 const Skill = () => { 
     // Initial state representing three skills
     const [skills, setSkills] = useState([
         { num: 1, skillName: 'Technology', active: true },
-        { num: 2, skillName: 'Fine Arts', active: false },
+        { num: 2, skillName: '', active: false },
         { num: 3, skillName: 'Music', active: false },
     ]);
 
@@ -61,6 +61,7 @@ const Skill = () => {
                             <Typography variant="h4"
                                 sx={{
                                     color: skill.active == true? theme.palette.primary.main : theme.palette.darkgrey.darkgrey600 ,
+                                    display: skill.active == false && skill.skillName === '' ? 'none': 'block',
                                     fontSize: {
                                         xs: '18px',
                                         s: '20px',
@@ -70,6 +71,18 @@ const Skill = () => {
                             >
                                 {skill.skillName}
                             </Typography>
+                            
+                            {skill.skillName === '' && (
+                                <Link underline="none" href="/addSkill" >
+                                    <Box className={styles.addSkill}
+                                        sx={{
+                                            backgroundColor: theme.palette.primary.main,
+                                        }}
+                                    >
+                                        <Add sx={{color:theme.palette.lightgrey.lightgrey00, fontSize:"16px"}} />
+                                    </Box>    
+                                </Link>
+                            )}
                         </Box>
                     </Box>
                 ))}

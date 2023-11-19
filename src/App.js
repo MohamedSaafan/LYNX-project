@@ -16,6 +16,7 @@ import MLBThanks from './Pages/My-Profile-View/Feedback/makeLynxBetter/MLBThanks
 import HelpWithClassification from './Pages/My-Profile-View/Feedback/helpWithClassificaton';
 import HWCThanks from './Pages/My-Profile-View/Feedback/helpWithClassificaton/HWCThanks';
 import UploadCoverImage from './Pages/My-Profile-View/My-Skills/components/skill-cover-image.js/upload-cover-image';
+import AddSkill from './Pages/My-Profile-View/My-Skills/components/add-skill';
 
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
         <Route path='HWCThanks' element={<HWCThanks />} />
         <Route path='helpWithClassificatin' element={<HelpWithClassification/>} />
         <Route path='UCImage' element={<UploadCoverImage />} />
+        <Route path='addSkill' element={<AddSkill />} />
+
       </Routes>
     </ThemeProvider>
   );

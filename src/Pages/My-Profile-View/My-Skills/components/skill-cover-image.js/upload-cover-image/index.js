@@ -51,21 +51,23 @@ const UploadCoverImage = (props) => {
                     }
                 }}
             >
-                <Box className={styles.primaryImage}>
+                <Box className={styles.primaryImage}
+                    sx={{
+                        
+                    }}
+                >
 
                     <Box className={styles.primarySkills}
                         sx={{
                             borderColor: theme.palette.lightgrey.lightgrey800,
                             background: theme.palette.lightgrey.lightgrey00,
+                            backgroundImage: selectedImage ? `url(${selectedImage})` : 'none',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center center',
+                            
                         }}
                     >
-                        {selectedImage && (
-                            <img
-                                src={selectedImage}
-                                alt="Cover"
-                                style={{ maxWidth: '100%', maxHeight: '100%', }}
-                            />
-                        )}
                     </Box>
                     {!selectedImage && (
                         <React.Fragment>
