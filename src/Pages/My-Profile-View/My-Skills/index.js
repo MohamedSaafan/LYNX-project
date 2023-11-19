@@ -32,19 +32,22 @@ const MySkills = () => {
             <SkillCoverImage />            
             <SkillStatus />
             <AboutSkill />
-            <Button variant="outlined"
-                sx={{
-                    pt: '10px', pb: '10px',
-                    color: theme.palette.darkgrey.darkgrey500,
-                    bgcolor: theme.palette.lightgrey.lightgrey500,
-                    borderColor: theme.palette.lightgrey.lightgrey500,
-                    textTransform: 'capitalize',
-                    width: {
-                        xs: '100%',
+            <Link underline="none" href="/addSkill" width="100%">
+                <Button variant="outlined"
+                    sx={{
+                        pt: '10px', pb: '10px',
+                        color: theme.palette.darkgrey.darkgrey500,
+                        bgcolor: theme.palette.lightgrey.lightgrey500,
+                        borderColor: theme.palette.lightgrey.lightgrey500,
+                        textTransform: 'capitalize',
+                        width: {
+                            xs: '100%',
 
-                    }
-                }}
-            >Edit</Button>
+                        }
+                    }}
+                >Edit</Button>
+
+            </Link>
             <Button variant="text"
                 sx={{
                     pt: '10px', pb: '10px',
