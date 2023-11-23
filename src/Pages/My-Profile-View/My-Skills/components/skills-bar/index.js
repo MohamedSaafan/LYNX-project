@@ -1,14 +1,14 @@
 import { Box } from "@mui/material";
 import styles from './style.module.css';
-import Skill from "./skill";
+import SkillsList from "./skills-list";
 
 
-const Skills = () => {
+const SkillsBar = () => {
     return (
         <Box className ={styles.skills} >
-            <Skill />
+            <SkillsList />
         </Box>
     );
 }
 
-export default Skills
+export default SkillsBar

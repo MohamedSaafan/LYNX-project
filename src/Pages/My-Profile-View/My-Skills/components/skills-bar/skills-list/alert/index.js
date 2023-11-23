@@ -5,13 +5,52 @@ import theme from "../../../../../../../themes/theme";
 import { Check, Info, PieChart, PieChartOutline, PieChartOutlined } from "@mui/icons-material";
 
 
-const Alert = (props) => {
-    const {skill} = props;
+const Alert = ({skill}) => {
     
     return (
         <React.Fragment>
             {(() => {
-                switch (skill) {
+                if (skill.active === true && skill.created === true) {
+                    return (
+                        <Box className={styles.alert}
+                            sx={{
+                                border: '1px solid',
+                                borderColor: theme.palette.lightgrey.lightgrey600,
+                                background: theme.palette.success.dark,
+                            }}
+                        >
+                            <Check fontSize="16px" sx={{ color: theme.palette.lightgrey.lightgrey00 }} />
+                        </Box>
+                    );
+                }
+                else if (skill.active === false && skill.created === true) { 
+                    return (
+                        <Box className={styles.alert}
+                            sx={{
+                                border: '1px solid',
+                                borderColor: theme.palette.lightgrey.lightgrey600,
+                                background: theme.palette.danger.red500,
+                            }}  
+                        >
+                            <Info fontSize="16px" sx={{ color: theme.palette.danger.red500, background: '#fff', borderRadius:'100px' }} />
+                        </Box>
+                    );
+                }
+                else if (skill.active === false && skill.created === false) { 
+                    return (
+                        <Box className={styles.alert}
+                            sx={{
+                                border: '1px solid',
+                                borderColor: theme.palette.lightgrey.lightgrey600,
+                                background: theme.palette.warning.main,
+                            }}  
+                        >
+                            <PieChartOutlined fontSize="16px" sx={{ color: theme.palette.lightgrey.lightgrey00 }} />
+                        </Box>
+                    );
+                }
+
+                /*switch (skill) {
                     case 1:
                         return (
                             <Box className={styles.alert}
@@ -51,7 +90,7 @@ const Alert = (props) => {
                     // Add other cases as needed
                     default:
                     return null; // Default case, return null or another fallback value
-                }
+                }*/
             })()}   
         
         </React.Fragment>

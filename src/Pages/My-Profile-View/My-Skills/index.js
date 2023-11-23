@@ -4,8 +4,8 @@ import theme from "../../../themes/theme";
 import styles from './style.module.css';
 import SkillStatus from "./components/status";
 import AboutSkill from "./components/skill-about";
-import Skills from "./components/skills";
 import SkillCoverImage from "./components/skill-cover-image.js";
+import SkillsBar from "./components/skills-bar";
 
 const MySkills = () => {
     return (
@@ -21,7 +21,7 @@ const MySkills = () => {
                 
             }}
         >
-            <Skills />
+            <SkillsBar />
             <Box className={styles.help}>
                 <Link href='/helpWithClassificatin' underline="none">
                     <Typography variant="body2" sx={{ color: theme.palette.secondary.dark, textDecoration:'underline' }}>

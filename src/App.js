@@ -17,6 +17,9 @@ import HelpWithClassification from './Pages/My-Profile-View/Feedback/helpWithCla
 import HWCThanks from './Pages/My-Profile-View/Feedback/helpWithClassificaton/HWCThanks';
 import UploadCoverImage from './Pages/My-Profile-View/My-Skills/components/skill-cover-image.js/upload-cover-image';
 import AddSkill from './Pages/My-Profile-View/My-Skills/components/add-skill';
+import UploadProfileImage from './Pages/My-Profile-View/My-Profile/profile-image/upload-profile-image';
+import UpdateProfilePicture from './Pages/My-Profile-View/My-Profile/profile-image/upload-profile-image/update-picture';
+import DiscoverHome from './Pages/Discover&Search/Discover-Home';
 
 
 function App() {
@@ -39,8 +42,11 @@ function App() {
         <Route path='HWCThanks' element={<HWCThanks />} />
         <Route path='helpWithClassificatin' element={<HelpWithClassification/>} />
         <Route path='UCImage' element={<UploadCoverImage />} />
+        <Route path='UPImage' element={<UploadProfileImage />} />
         <Route path='addSkill' element={<AddSkill />} />
-
+        <Route path='UProfilePicture' element={<UpdateProfilePicture />} />
+        <Route path='discover-home' element={<DiscoverHome />} />
+        
       </Routes>
     </ThemeProvider>
   );
