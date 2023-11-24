@@ -20,6 +20,8 @@ import AddSkill from './Pages/My-Profile-View/My-Skills/components/add-skill';
 import UploadProfileImage from './Pages/My-Profile-View/My-Profile/profile-image/upload-profile-image';
 import UpdateProfilePicture from './Pages/My-Profile-View/My-Profile/profile-image/upload-profile-image/update-picture';
 import DiscoverHome from './Pages/Discover&Search/Discover-Home';
+import CreatorSearch from './Pages/Discover&Search/Search';
+import SearchResult from './Pages/Discover&Search/Results';
 
 
 function App() {
@@ -46,6 +48,8 @@ function App() {
         <Route path='addSkill' element={<AddSkill />} />
         <Route path='UProfilePicture' element={<UpdateProfilePicture />} />
         <Route path='discover-home' element={<DiscoverHome />} />
+        <Route path='search' element={<CreatorSearch />} />
+        <Route path='searchResult' element={<SearchResult />} />
         
       </Routes>
     </ThemeProvider>

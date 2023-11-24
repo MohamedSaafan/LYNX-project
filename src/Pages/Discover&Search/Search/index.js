@@ -1,15 +1,13 @@
-import { Box, Button, Link } from "@mui/material";
+import { Box, Button, Divider } from "@mui/material";
 import React from "react";
 import styles from './style.module.css';
 import theme from "../../../themes/theme";
 import Logo from "./logo";
-import Items from "./items";
+import InputFilter from "./input-filter";
 import Footer from "../../Footer/footer";
-import MyButton from "./button";
-
-const DiscoverHome = () => {
+const CreatorSearch = () => {
     return (
-        <Box className={styles.home}
+        <Box className={styles.search}
             sx={{
                 bgcolor: theme.palette.lightgrey.lightgrey500,
                 minHeight:'100vh',
@@ -25,12 +23,20 @@ const DiscoverHome = () => {
                 }}
             >
                 <Logo />
-                <Items />
-                <MyButton />
+                <Divider
+                    sx={{
+                        width: {
+                            xs: '100%',
+                            
+                            color: theme.palette.darkgrey.darkgrey500,
+                        }
+                    }}
+                >Or</Divider>
+                <InputFilter />
             </Box>
             <Footer />
         </Box>
     );
 }
 
-export default DiscoverHome;
+export default CreatorSearch;

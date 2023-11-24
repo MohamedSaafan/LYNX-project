@@ -1,0 +1,27 @@
+.image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    position: relative;
+}
+.primaryImg{
+    height: 378px;
+    align-self: stretch;
+    background-image: url(../../../../../../assets/images/searchResultImage.png);
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.options{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    flex-wrap: wrap;
+    padding-left: 8px;
+}

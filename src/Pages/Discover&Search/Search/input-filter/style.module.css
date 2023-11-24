@@ -1,0 +1,65 @@
+.parent{
+    display: flex;
+    padding: 8px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.logo{
+    width: 238px;
+    height: 79.056px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    align-self: stretch;
+
+}
+.country{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    gap: 16px;
+}
+.selectCountry{
+    flex: 1;
+}
+.selectState{
+    flex: 1;
+}
+.age{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.tags{
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+.checkbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
