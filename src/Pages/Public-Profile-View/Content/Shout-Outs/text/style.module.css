@@ -1,0 +1,12 @@
+.card{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 16px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.container{
+    width: calc(50% - 8px);
+}

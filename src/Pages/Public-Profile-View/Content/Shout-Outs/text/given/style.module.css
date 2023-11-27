@@ -1,0 +1,24 @@
+.card{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 6px;
+    background: #FFF;
+    margin-right: 10px;
+    cursor: grab;
+}
+.text{
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+.button{
+    display: flex;
+    align-self: stretch;
+    padding: 4px 8px 12px;
+}

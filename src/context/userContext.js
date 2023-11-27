@@ -16,7 +16,12 @@ export const UserProvider = ({ children }) => {
       birthdate: '', 
       age: 25,
       skills: [
-          { id: 101, name: 'JavaScript', level: 'Intermediate' },
+        {
+          id: 101,
+          name: 'Technology',
+          level: 'Intermediate',
+          
+        },
           { id: 102, name: 'React', level: 'Advanced' },
       ],
     },

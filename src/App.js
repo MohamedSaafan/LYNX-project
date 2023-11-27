@@ -22,36 +22,47 @@ import UpdateProfilePicture from './Pages/My-Profile-View/My-Profile/profile-ima
 import DiscoverHome from './Pages/Discover&Search/Discover-Home';
 import CreatorSearch from './Pages/Discover&Search/Search';
 import SearchResult from './Pages/Discover&Search/Results';
+import SearchContextProvider from './context/searchContext';
+import PublicProfileView from './Pages/Public-Profile-View';
+import SkillsBarContextProvider from './context/skills-bar-context';
+import SkillsContextProvider from './context/skills-context';
 
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Routes>
-        <Route path='/' element={<Splash />} />
-        <Route path='login' element = {<Login /> } />
-        <Route path="creator-register" element={<CreatorRegistration />}></Route>
-        <Route path='thanks' element={<Thanks />} ></Route>
-        <Route path='my-profile' element={<MyProfile />}>
-          
-        </Route>
-        <Route path='about-edit' element={<AboutEdit />} />
-        <Route path='editSkill' element={<EditSkill/>} />
-        <Route path='editDescription' element={<EditDescription/>} />
-        <Route path='makeLynxBetter' element={<MakeLynxBetter />} />
-        <Route path='MLBThanks' element={<MLBThanks />} />
-        <Route path='HWCThanks' element={<HWCThanks />} />
-        <Route path='helpWithClassificatin' element={<HelpWithClassification/>} />
-        <Route path='UCImage' element={<UploadCoverImage />} />
-        <Route path='UPImage' element={<UploadProfileImage />} />
-        <Route path='addSkill' element={<AddSkill />} />
-        <Route path='UProfilePicture' element={<UpdateProfilePicture />} />
-        <Route path='discover-home' element={<DiscoverHome />} />
-        <Route path='search' element={<CreatorSearch />} />
-        <Route path='searchResult' element={<SearchResult />} />
-        
-      </Routes>
+      <SearchContextProvider>
+        <SkillsBarContextProvider>
+          <SkillsContextProvider>
+            <Routes>
+              <Route path='/' element={<Splash />} />
+              <Route path='login' element = {<Login /> } />
+              <Route path="creator-register" element={<CreatorRegistration />}></Route>
+              <Route path='thanks' element={<Thanks />} ></Route>
+              <Route path='my-profile' element={<MyProfile />}>
+                
+              </Route>
+              <Route path='about-edit' element={<AboutEdit />} />
+              <Route path='editSkill' element={<EditSkill/>} />
+              <Route path='editDescription' element={<EditDescription/>} />
+              <Route path='makeLynxBetter' element={<MakeLynxBetter />} />
+              <Route path='MLBThanks' element={<MLBThanks />} />
+              <Route path='HWCThanks' element={<HWCThanks />} />
+              <Route path='helpWithClassificatin' element={<HelpWithClassification/>} />
+              <Route path='UCImage' element={<UploadCoverImage />} />
+              <Route path='UPImage' element={<UploadProfileImage />} />
+              <Route path='addSkill' element={<AddSkill />} />
+              <Route path='UProfilePicture' element={<UpdateProfilePicture />} />
+              <Route path='discover-home' element={<DiscoverHome />} />
+              <Route path='search' element={<CreatorSearch />} />
+              <Route path='searchResult' element={<SearchResult />} />
+              <Route path='public-profile-view' element={<PublicProfileView />} />
+              
+              </Routes>
+          </SkillsContextProvider>
+          </SkillsBarContextProvider>
+        </SearchContextProvider>
     </ThemeProvider>
   );
 }

@@ -1,0 +1,10 @@
+.up{
+    position: absolute ;
+    bottom: 640px;
+    left: 16px;
+    z-index: 1000;
+    width: calc(100% - 32px);
+    text-transform: capitalize;
+    box-shadow: none;
+    display: flex;
+}
