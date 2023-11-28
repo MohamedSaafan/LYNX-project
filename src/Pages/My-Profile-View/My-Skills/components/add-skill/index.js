@@ -5,7 +5,7 @@ import EditDescription from "./comonents/editDescription";
 
 const AddSkill = () => {
     return (
-        <Box className>
+        <Box>
             <EditSkill />
             <EditDescription />
         </Box>

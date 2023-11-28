@@ -26,6 +26,9 @@ import SearchContextProvider from './context/searchContext';
 import PublicProfileView from './Pages/Public-Profile-View';
 import SkillsBarContextProvider from './context/skills-bar-context';
 import SkillsContextProvider from './context/skills-context';
+import ProjectLanding from './Pages/Project-View/landing';
+import BoardSubmissionForm from './Pages/Project-View/board-submission-form';
+import JobSubmission from './Pages/Project-View/job-submission';
 
 
 function App() {
@@ -58,7 +61,10 @@ function App() {
               <Route path='search' element={<CreatorSearch />} />
               <Route path='searchResult' element={<SearchResult />} />
               <Route path='public-profile-view' element={<PublicProfileView />} />
-              
+              <Route path='project-view' element={<ProjectLanding />} />
+              <Route path='project-board-submistion' element={<BoardSubmissionForm />} />
+              <Route path='job-submission' element={<JobSubmission />} />
+                            
               </Routes>
           </SkillsContextProvider>
           </SkillsBarContextProvider>

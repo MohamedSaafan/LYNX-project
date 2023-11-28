@@ -1,0 +1,28 @@
+.basicLogo{
+    display: flex;
+    padding: 16px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;    
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+.logo{
+    width: 233.839px;
+    height: 79.056px;
+    flex-shrink: 0;
+}
+.beta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
