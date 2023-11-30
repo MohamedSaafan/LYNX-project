@@ -1,0 +1,32 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.content{
+    display: flex;
+    padding: 8px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+.menus{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+.item{
+    text-transform: capitalize !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    padding: 0 !important;
+    display: flex;
+    gap: 12px;
+    & span{
+        margin: 0;
+    } 
+}

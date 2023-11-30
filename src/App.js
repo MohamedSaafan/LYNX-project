@@ -29,6 +29,8 @@ import SkillsContextProvider from './context/skills-context';
 import ProjectLanding from './Pages/Project-View/landing';
 import BoardSubmissionForm from './Pages/Project-View/board-submission-form';
 import JobSubmission from './Pages/Project-View/job-submission';
+import Settings from './Pages/Settings';
+import SettingsContextProvider from './context/settings-context';
 
 
 function App() {
@@ -38,34 +40,37 @@ function App() {
       <SearchContextProvider>
         <SkillsBarContextProvider>
           <SkillsContextProvider>
-            <Routes>
-              <Route path='/' element={<Splash />} />
-              <Route path='login' element = {<Login /> } />
-              <Route path="creator-register" element={<CreatorRegistration />}></Route>
-              <Route path='thanks' element={<Thanks />} ></Route>
-              <Route path='my-profile' element={<MyProfile />}>
-                
-              </Route>
-              <Route path='about-edit' element={<AboutEdit />} />
-              <Route path='editSkill' element={<EditSkill/>} />
-              <Route path='editDescription' element={<EditDescription/>} />
-              <Route path='makeLynxBetter' element={<MakeLynxBetter />} />
-              <Route path='MLBThanks' element={<MLBThanks />} />
-              <Route path='HWCThanks' element={<HWCThanks />} />
-              <Route path='helpWithClassificatin' element={<HelpWithClassification/>} />
-              <Route path='UCImage' element={<UploadCoverImage />} />
-              <Route path='UPImage' element={<UploadProfileImage />} />
-              <Route path='addSkill' element={<AddSkill />} />
-              <Route path='UProfilePicture' element={<UpdateProfilePicture />} />
-              <Route path='discover-home' element={<DiscoverHome />} />
-              <Route path='search' element={<CreatorSearch />} />
-              <Route path='searchResult' element={<SearchResult />} />
-              <Route path='public-profile-view' element={<PublicProfileView />} />
-              <Route path='project-view' element={<ProjectLanding />} />
-              <Route path='project-board-submistion' element={<BoardSubmissionForm />} />
-              <Route path='job-submission' element={<JobSubmission />} />
-                            
+            <SettingsContextProvider>
+              <Routes>
+                <Route path='/' element={<Splash />} />
+                <Route path='login' element = {<Login /> } />
+                <Route path="creator-register" element={<CreatorRegistration />}></Route>
+                <Route path='thanks' element={<Thanks />} ></Route>
+                <Route path='my-profile' element={<MyProfile />}>
+                  
+                </Route>
+                <Route path='about-edit' element={<AboutEdit />} />
+                <Route path='editSkill' element={<EditSkill/>} />
+                <Route path='editDescription' element={<EditDescription/>} />
+                <Route path='makeLynxBetter' element={<MakeLynxBetter />} />
+                <Route path='MLBThanks' element={<MLBThanks />} />
+                <Route path='HWCThanks' element={<HWCThanks />} />
+                <Route path='helpWithClassificatin' element={<HelpWithClassification/>} />
+                <Route path='UCImage' element={<UploadCoverImage />} />
+                <Route path='UPImage' element={<UploadProfileImage />} />
+                <Route path='addSkill' element={<AddSkill />} />
+                <Route path='UProfilePicture' element={<UpdateProfilePicture />} />
+                <Route path='discover-home' element={<DiscoverHome />} />
+                <Route path='search' element={<CreatorSearch />} />
+                <Route path='searchResult' element={<SearchResult />} />
+                <Route path='public-profile-view' element={<PublicProfileView />} />
+                <Route path='project-view' element={<ProjectLanding />} />
+                <Route path='project-board-submistion' element={<BoardSubmissionForm />} />
+                <Route path='job-submission' element={<JobSubmission />} />
+                <Route path='settings' element={<Settings />} />
+                              
               </Routes>
+            </SettingsContextProvider>
           </SkillsContextProvider>
           </SkillsBarContextProvider>
         </SearchContextProvider>

@@ -1,0 +1,20 @@
+.arrow{
+    display: flex;
+    padding: 8px 24px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+.backButton{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: capitalize !important;
+    & span{
+        margin: 0 !important;
+        padding: 0 !important;
+        & :first-child{
+            font-size: 24px !important;
+        }
+    }
+}

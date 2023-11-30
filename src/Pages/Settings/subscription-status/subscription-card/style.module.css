@@ -1,0 +1,24 @@
+.subCard{
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 6px;
+    background: #FFF;
+
+    & .content{
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        flex: 1 0 0;
+
+        & .text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+    }
+
+}
